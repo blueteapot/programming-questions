@@ -20,7 +20,7 @@ def knapsack_naive(ws, vs, maxw):
 # (2) DP solution, O(nW)
 def knapsack_dynamic(ws, vs, W):
     n = len(ws)
-    K = [[0] * (W+1)] * (n+1)
+    K = [[0] * (W+1) for i in range(n+1)]
 
     for i in range(n+1):
         for w in range(W+1):
