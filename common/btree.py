@@ -38,6 +38,28 @@ class Tree:
         else:
             return None
 
+    def remove(self, val):
+        _remove(self, val, self.root)
+
+    def _remove(self, val, node):
+        if node == None:
+            return None
+
+        if node.v < val:
+            node.l = _remove(self, val, node.l)
+
+        elif node.v > val:
+            node.r = _remove(self, val, node.r)
+
+        else:
+            if node.l == None:
+                return node.r
+            if node.r == None:
+                return node.l
+
+            
+
+
     def _find(self, val, node):
         if(val == node.v):
             return node
