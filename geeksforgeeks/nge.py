@@ -1,3 +1,5 @@
+# https://www.geeksforgeeks.org/next-greater-element/
+
 def nge(nums):
     stack = []
     n = len(nums)
