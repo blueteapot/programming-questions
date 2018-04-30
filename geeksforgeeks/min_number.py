@@ -6,8 +6,12 @@ def min_number(seq):
         stack.insert(0, i)
 
     n = len(seq)
-    for i in range(n):
-        
+    current = seq[0]
+    i = 0
+    while current == seq[i]:
+
+
+
 
 
 
