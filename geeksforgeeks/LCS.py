@@ -23,12 +23,18 @@ def LCS(s1, s2):
                 dp[i][j] = max(max(dp[i - 1][j - 1] + 1, dp[i - 1][j]), dp[i][j - 1])
 
     # print dp mat
-    for i in range(n1):
-        line = ""
-        for j in range(n2):
-            line += str(dp[i][j]) + "\t"
-        print(line)
+    # for i in range(n1):
+    #     line = ""
+    #     for j in range(n2):
+    #         line += str(dp[i][j]) + "\t"
+    #     print(line)
 
+    return dp[n1 - 1][n2 - 1]
+
+def longest_palindrom(s1):
+    s1_reversed = ''.join(reversed(s1))
+    return LCS(s1, s1_reversed)
 
 # test
 print(LCS("abcdxyz", "xyzabcd"))
+print(longest_palindrom("abaacaaba"))
